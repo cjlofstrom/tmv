@@ -1,7 +1,5 @@
 import { Providers } from "@/components/providers"
-import { SiteHeader } from "@/components/layout/site-header"
 import { Toaster } from "@/components/ui/toaster"
-import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -9,7 +7,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Your Social Platform",
+  title: "TMV",
   description: "Share and discover media links",
 }
 
@@ -20,12 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.className, "min-h-screen bg-background antialiased")}>
+      <body className={inter.className}>
         <Providers>
-          <div className="relative flex min-h-screen flex-col">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-          </div>
+          <main className="min-h-screen bg-background">
+            {children}
+          </main>
           <Toaster />
         </Providers>
       </body>
