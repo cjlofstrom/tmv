@@ -1,8 +1,7 @@
 import { Providers } from "@/components/providers"
-import { Toaster } from "@/components/ui/toaster"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import "./globals.css"  // Make sure this import is present
 
 const inter = Inter({ subsets: ["latin"] })
 
